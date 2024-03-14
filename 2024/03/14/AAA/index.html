@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>AAA | zero&#39;s site</title>
+  <link rel="stylesheet" href="/css/fonts/Chinese-normal-normal.min.css">
+  <link rel="stylesheet" href="/css/fonts/ChineseMono-normal-normal.min.css">
+  <link rel="stylesheet" href="/css/fonts/Chinese-italic-normal.min.css">
+  <link rel="stylesheet" href="/css/fonts/Chinese-normal-bold.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" content="一事无成的一天。早上起来想着写写 OS 作业，在 rCore 上写 backtrace，一上午进行到了可以在 cargo config 里传递 rustc 编译参数 -C force-frame-pointers=yes 用 fp 回溯。下午想着怎么输出一下函数信息（函数名、起始位置、参数列表），觉">
+  
+  
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div id="nav-outer">
+  <nav id="main-nav" class="outer">
+    <a id="main-nav-toggle" class="nav-icon"></a>
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+    <div class="main-nav-space-between"></div>
+    
+  </nav>
+</div>
+<div id="header-title">
+  <h1 id="logo-wrap">
+    <a href="/" id="logo">zero&#39;s site</a>
+  </h1>
+  
+</div>
+
+      <div id="content" class="outer">
+        <section id="main"><article id="post-AAA" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/14/AAA/" class="article-date">
+  <time class="dt-published" datetime="2024-03-14T13:21:37.000Z" itemprop="datePublished">2024-03-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      AAA
+    </h1>
+  
+
+      </header>
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>一事无成的一天<span class="bd-box"><h-char class="bd bd-beg"><h-inner>。</h-inner></h-char></span>早上起来想着写写 OS 作业<span class="bd-box"><h-char class="bd bd-beg"><h-inner>，</h-inner></h-char></span>在 rCore 上写 backtrace<span class="bd-box"><h-char class="bd bd-beg"><h-inner>，</h-inner></h-char></span>一上午进行到了可以在 cargo config 里传递 rustc 编译参数 <code>-C force-frame-pointers=yes</code> 用 fp 回溯<span class="bd-box"><h-char class="bd bd-beg"><h-inner>。</h-inner></h-char></span>下午想着怎么输出一下函数信息<span class="bd-box"><h-char class="bd bd-end"><h-inner>（</h-inner></h-char></span>函数名<span class="bd-box"><h-char class="bd bd-beg"><h-inner>、</h-inner></h-char></span>起始位置<span class="bd-box"><h-char class="bd bd-beg"><h-inner>、</h-inner></h-char></span>参数列表<span class="bd-box"><h-char class="bd bd-beg"><h-inner>）</h-inner></h-char><h-char class="bd bd-beg"><h-inner>，</h-inner></h-char></span>觉得一种方式是动态地存在栈上<span class="bd-box"><h-char class="bd bd-beg"><h-inner>，</h-inner></h-char></span>尝试了 <code>proc-macro</code> 过程宏但是好像没法控制存在栈上的位置<span class="bd-box"><h-char class="bd bd-beg"><h-inner>，</h-inner></h-char></span>除非用 <code>asm!</code> 直接链接到每个函数的 prologue 位置<span class="bd-box"><h-char class="bd bd-beg"><h-inner>，</h-inner></h-char></span>但是这也没发定位啊<span class="bd-box"><h-char class="bd bd-beg"><h-inner>。</h-inner></h-char></span>果然不能自己想<span class="bd-box"><h-char class="bd bd-beg"><h-inner>，</h-inner></h-char></span>还是应该按照仓库里说的查找符号表 <a target="_blank" rel="noopener" href="https://github.com/os-module/tracer/blob/main">https://github.com/os-module/tracer/blob/main</a> 来<span class="bd-box"><h-char class="bd bd-beg"><h-inner>，</h-inner></h-char></span>好难啊我累了<span class="bd-box"><h-char class="bd bd-beg"><h-inner>。</h-inner></h-char></span></p>
+<p>还是放弃吧<span class="bd-box"><h-char class="bd bd-beg"><h-inner>，</h-inner></h-char></span>rCore ch3 都被我改的面目全非了<span class="bd-box"><h-char class="bd bd-beg"><h-inner>。</h-inner></h-char></span></p>
+<p>一事无成 :<span class="bd-box"><h-char class="bd bd-beg"><h-inner>）</h-inner></h-char></span></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2024/03/03/OSTEP/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          OSTEP
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 zerolllin<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a><br>
+      
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="/js/clipboard.min.js"></script>
+<script src="/js/jquery-1.4.3.min.js"></script>
+
+<script src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+<script>
+  MathJax = {
+    options: {
+      enableMenu: false
+    },
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    }
+  };
+</script>
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    CommonHTML: {
+      linebreaks: false
+    }
+  });
+  </script> -->
+<script type="text/javascript" id="MathJax-script" async
+  src="/mathjax/tex-chtml.js">
+</script>
+<!-- <script type="text/javascript"
+   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_CHTML">
+</script> -->
+
+  </div>
+</body>
+</html>
